@@ -19,7 +19,6 @@ class ConnectionManager:
             return
         self.active_connections[user_id] = websocket
         try:
-            await websocket.accept()
             user = update_status(user_id, "Online", session)
             await self.notify_status_change(user_id, "Online")
             return user
