@@ -72,7 +72,7 @@ app.include_router(User.user_routes)
 
 manager = ConnectionManager()
 
-@app.websocket("/ws/{user_id}")
+@app.websocket("{user_id}")
 async def websocket_endpoint(websocket: WebSocket, user_id: int, session: SessionDep):
     connect = await manager.connect(websocket, user_id, session)
     try:
