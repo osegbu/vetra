@@ -52,7 +52,8 @@ app = FastAPI(
 # Define allowed origins for CORS
 origins = [
     "http://localhost:3000",
-    "https://vetra-nextjs.vercel.app"
+    "https://vetra-nextjs.vercel.app",
+    "https://vetrachat.vercel.app"
 ]
 
 # Add CORS middleware to the app
